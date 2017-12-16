@@ -28,7 +28,7 @@ These images contain the following additions to the vanilla PHP images:
 
 ## Pull images
 
-The images are stored on [Docker Hub](https://hub.docker.com/r/iao2/docker-php-ci2/). Use `docker pull iao2/docker-php-ci` to pull these images.
+The images are stored on [Docker Hub](https://hub.docker.com/r/iao2/docker-php-ci2/). Use `docker pull iao2/docker-php-ci2` to pull these images.
 
 The following tags are available:
 
