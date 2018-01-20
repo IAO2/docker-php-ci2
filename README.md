@@ -6,14 +6,14 @@ This repository contains Docker images for PHP 5.5 and higher which are based on
 
 These images contain the following additions to the vanilla PHP images:
 
-* Version control packages (git, mercurial -REMOVE, subversion -REMOVE)
+* Version control packages (git, mercurial -REMOVED, subversion -REMOVED)
 * composer
-* node.js and npm -REMOVE
+* node.js and npm -REMOVED
 * PHP extensions:
   * curl
   * gd
   * gettext
-  * intl -REMOVE
+  * intl -REMOVED
   * json
   * mcrypt
   * mbstring
@@ -32,17 +32,19 @@ The images are stored on [Docker Hub](https://hub.docker.com/r/iao2/docker-php-c
 
 The following tags are available:
 
-* 5.5 -REMOVE
+* 5.5 -REMOVED
 * 5.6
 * 7.0
 * 7.1
+* 7.2 -ADDED
 
 There are also tags without xdebug.
 
-* 5.5-no-xdebug -REMOVE
+* 5.5-no-xdebug -REMOVED
 * 5.6-no-xdebug
 * 7.0-no-xdebug
 * 7.1-no-xdebug
+* 7.2-no-xdebug -ADDED
 
 ## Build process
 
