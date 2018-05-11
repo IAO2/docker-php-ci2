@@ -54,14 +54,12 @@ RUN  mv src/libsodium /usr/local/
 RUN  rm -Rf /tmp-libsodium/ 
 RUN  docker-php-ext-install sodium 
 RUN  docker-php-ext-enable sodium 
-#RUN  pecl install xdebug 
-#RUN  docker-php-ext-enable xdebug
 
 RUN echo "memory_limit = -1;" > $PHP_INI_DIR/conf.d/memory_limit.ini
 
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && composer global require "fxp/composer-asset-plugin:^1.4.2"
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 #RUN curl -sL https://deb.nodesource.com/setup_6.x | bash && apt-get install -y nodejs && apt-get clean
 
