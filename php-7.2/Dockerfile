@@ -41,19 +41,19 @@ RUN  docker-php-ext-install opcache
 #RUN  docker-php-ext-install gd 
 RUN  pecl install --nodeps mcrypt-snapshot 
 RUN  docker-php-ext-enable mcrypt 
-RUN  mkdir -p /tmp-libsodium/libsodium 
-RUN  cd /tmp-libsodium/libsodium 
-RUN  curl -L https://download.libsodium.org/libsodium/releases/libsodium-1.0.16.tar.gz -o libsodium-1.0.16.tar.gz 
-RUN  tar xfvz libsodium-1.0.16.tar.gz 
-RUN  cd /tmp-libsodium/libsodium/libsodium-1.0.16/ 
-RUN  ./configure 
-RUN  make 
-RUN  make check 
-RUN  make install 
-RUN  mv src/libsodium /usr/local/ 
-RUN  rm -Rf /tmp-libsodium/ 
-RUN  docker-php-ext-install sodium 
-RUN  docker-php-ext-enable sodium 
+RUN && mkdir -p /tmp-libsodium/libsodium \
+    && cd /tmp-libsodium/libsodium \
+    && curl -L https://download.libsodium.org/libsodium/releases/libsodium-1.0.16.tar.gz -o libsodium-1.0.16.tar.gz \
+    && tar xfvz libsodium-1.0.16.tar.gz \
+    && cd /tmp-libsodium/libsodium/libsodium-1.0.16/ \
+    && ./configure \
+    && make \
+    && make check \
+    && make install \
+    && mv src/libsodium /usr/local/ \
+    && rm -Rf /tmp-libsodium/ \
+    && docker-php-ext-install sodium \
+    && docker-php-ext-enable sodium
 RUN  pecl install xdebug 
 RUN  docker-php-ext-enable xdebug
 
