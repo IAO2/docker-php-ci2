@@ -41,7 +41,7 @@ RUN  docker-php-ext-install opcache
 #RUN  docker-php-ext-install gd 
 RUN  pecl install --nodeps mcrypt-snapshot 
 RUN  docker-php-ext-enable mcrypt 
-RUN && mkdir -p /tmp-libsodium/libsodium \
+RUN    mkdir -p /tmp-libsodium/libsodium \
     && cd /tmp-libsodium/libsodium \
     && curl -L https://download.libsodium.org/libsodium/releases/libsodium-1.0.16.tar.gz -o libsodium-1.0.16.tar.gz \
     && tar xfvz libsodium-1.0.16.tar.gz \
