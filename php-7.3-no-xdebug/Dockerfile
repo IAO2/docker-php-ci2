@@ -8,6 +8,7 @@ RUN apt-get install -y sudo
 RUN apt-get install -y git 
 RUN apt-get install -y libxslt-dev 
 RUN apt-get install -y zlib1g-dev 
+RUN apt-get install -y libzip-dev 
 #RUN apt-get install -y graphviz 
 RUN apt-get install -y zip 
 RUN apt-get install -y libmcrypt-dev 
