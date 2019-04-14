@@ -36,6 +36,7 @@ RUN  docker-php-ext-install gettext
 RUN  docker-php-ext-install curl 
 RUN  docker-php-ext-install pdo_mysql 
 RUN  docker-php-ext-install json 
+RUN  docker-php-ext-install mysqli 
 #RUN  docker-php-ext-install intl 
 RUN  docker-php-ext-install opcache 
 RUN  docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/ \
