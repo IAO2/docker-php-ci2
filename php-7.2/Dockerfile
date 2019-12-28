@@ -44,9 +44,9 @@ RUN  pecl install --nodeps mcrypt-snapshot
 RUN  docker-php-ext-enable mcrypt 
 RUN    mkdir -p /tmp-libsodium/libsodium \
     && cd /tmp-libsodium/libsodium \
-    && curl -L https://download.libsodium.org/libsodium/releases/libsodium-1.0.16.tar.gz -o libsodium-1.0.16.tar.gz \
-    && tar xfvz libsodium-1.0.16.tar.gz \
-    && cd /tmp-libsodium/libsodium/libsodium-1.0.16/ \
+    && curl -L https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz -o libsodium-1.0.18.tar.gz \
+    && tar xfvz libsodium-1.0.18.tar.gz \
+    && cd /tmp-libsodium/libsodium/libsodium-1.0.18/ \
     && ./configure \
     && make \
     && make check \
