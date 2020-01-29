@@ -31,7 +31,8 @@ RUN  apt-get clean
 RUN  docker-php-ext-install soap 
 RUN  docker-php-ext-install zip 
 RUN  docker-php-ext-install xsl 
-RUN  docker-php-ext-install mbstring --disable-mbregex
+RUN  docker-php-ext-configure mbstring --disable-mbregex \
+  && docker-php-ext-install mbstring
 RUN  docker-php-ext-install gettext 
 RUN  docker-php-ext-install curl 
 RUN  docker-php-ext-install pdo_mysql 
@@ -43,19 +44,19 @@ RUN  docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-d
   && docker-php-ext-install gd 
 RUN  pecl install --nodeps mcrypt-snapshot 
 RUN  docker-php-ext-enable mcrypt 
-RUN    mkdir -p /tmp-libsodium/libsodium \
-    && cd /tmp-libsodium/libsodium \
-    && curl -L https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz -o libsodium-1.0.18.tar.gz \
-    && tar xfvz libsodium-1.0.18.tar.gz \
-    && cd /tmp-libsodium/libsodium/libsodium-1.0.18/ \
-    && ./configure \
-    && make \
-    && make check \
-    && make install \
-    && mv src/libsodium /usr/local/ \
-    && rm -Rf /tmp-libsodium/ \
-    && docker-php-ext-install sodium \
-    && docker-php-ext-enable sodium
+RUN  mkdir -p /tmp-libsodium/libsodium \
+  && cd /tmp-libsodium/libsodium \
+  && curl -L https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz -o libsodium-1.0.18.tar.gz \
+  && tar xfvz libsodium-1.0.18.tar.gz \
+  && cd /tmp-libsodium/libsodium/libsodium-1.0.18/ \
+  && ./configure \
+  && make \
+  && make check \
+  && make install \
+  && mv src/libsodium /usr/local/ \
+  && rm -Rf /tmp-libsodium/ \
+  && docker-php-ext-install sodium \
+  && docker-php-ext-enable sodium
 RUN  pecl install xdebug 
 RUN  docker-php-ext-enable xdebug
 
