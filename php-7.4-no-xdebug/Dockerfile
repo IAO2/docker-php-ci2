@@ -41,7 +41,7 @@ RUN  docker-php-ext-install json
 RUN  docker-php-ext-install mysqli 
 #RUN  docker-php-ext-install intl 
 RUN  docker-php-ext-install opcache 
-RUN  docker-php-ext-configure gd --with-freetype --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/ \
+RUN  docker-php-ext-configure gd --with-freetype --with-jpeg --with-png \
   && docker-php-ext-install gd 
 RUN  pecl install --nodeps mcrypt-snapshot 
 RUN  docker-php-ext-enable mcrypt 
