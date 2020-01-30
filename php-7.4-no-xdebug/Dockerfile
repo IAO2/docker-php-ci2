@@ -9,6 +9,7 @@ RUN apt-get install -y git
 RUN apt-get install -y libxslt-dev 
 RUN apt-get install -y zlib1g-dev 
 RUN apt-get install -y libzip-dev 
+RUN apt-get install -y libonig-dev
 #RUN apt-get install -y graphviz 
 RUN apt-get install -y zip 
 RUN apt-get install -y libmcrypt-dev 
@@ -31,8 +32,8 @@ RUN  apt-get clean
 RUN  docker-php-ext-install soap 
 RUN  docker-php-ext-install zip 
 RUN  docker-php-ext-install xsl 
-RUN  docker-php-ext-configure mbstring --disable-mbregex \
-  && docker-php-ext-install mbstring
+#RUN  docker-php-ext-configure mbstring --disable-mbregex \
+#  && docker-php-ext-install mbstring
 RUN  docker-php-ext-install gettext 
 RUN  docker-php-ext-install curl 
 RUN  docker-php-ext-install pdo_mysql 
