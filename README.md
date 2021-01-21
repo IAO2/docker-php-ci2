@@ -39,6 +39,7 @@ The following tags are available:
 * 7.2 -ADDED
 * 7.3 -ADDED
 * 7.4 -ADDED
+* 8.0 -ADDED
 
 There are also tags without xdebug.
 
@@ -49,6 +50,7 @@ There are also tags without xdebug.
 * 7.2-no-xdebug -ADDED
 * 7.3-no-xdebug -ADDED
 * 7.4-no-xdebug -ADDED
+* 8.0-no-xdebug -ADDED
 
 ## Build process
 
