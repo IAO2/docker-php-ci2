@@ -2,7 +2,8 @@
 
 Update IAO2 from https://github.com/geertw/docker-php-ci
 
-This repository contains Docker images for PHP 5.5 and higher which are based on the [official PHP Docker images](https://hub.docker.com/r/_/php/). These images were created specifically to use them for continious integration (Gitlab CI specifically), but they can be used for other purposes too.
+This repository contains Docker images for PHP 5.5 and higher which are based on the [official PHP Docker images](https://hub.docker.com/r/_/php/). 
+These images were created specifically to use them for continious integration (Gitlab CI specifically), but they can be used for other purposes too.
 
 These images contain the following additions to the vanilla PHP images:
 
@@ -40,6 +41,7 @@ The following tags are available:
 * 7.3 -ADDED
 * 7.4 -ADDED
 * 8.0 -ADDED
+* 8.1 -ADDED
 
 There are also tags without xdebug.
 
@@ -51,6 +53,7 @@ There are also tags without xdebug.
 * 7.3-no-xdebug -ADDED
 * 7.4-no-xdebug -ADDED
 * 8.0-no-xdebug -ADDED
+* 8.1-no-xdebug -ADDED
 
 ## Build process
 

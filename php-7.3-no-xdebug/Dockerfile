@@ -17,7 +17,7 @@ RUN apt-get install -y libmcrypt-dev
 #RUN apt-get install -y libpcre3-dev 
 RUN apt-get install -y libgd-dev 
 #RUN apt-get install -y libfreetype6-dev 
-RUN apt-get install -y sqlite 
+#RUN apt-get install -y sqlite 
 RUN apt-get install -y curl 
 RUN apt-get install -y build-essential 
 RUN apt-get install -y unzip 
