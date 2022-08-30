@@ -1,3 +1,4 @@
+@ECHO OFF
 
 IF %1.==. GOTO HELP
 
@@ -15,6 +16,8 @@ ECHO.
 ECHO.
 
 :END
+CD ..
 
-PAUSE
-PAUSE
+:BE5
+C:\UTIL\JV_BE.exe 30
+
