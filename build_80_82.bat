@@ -12,6 +12,9 @@ CALL build.bat php-8.0-no-xdebug
 CALL build.bat php-8.1 
 CALL build.bat php-8.1-no-xdebug 
 
+CALL build.bat php-8.2 
+CALL build.bat php-8.2-no-xdebug 
+
 :END
 
 PAUSE

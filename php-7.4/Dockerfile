@@ -58,7 +58,7 @@ RUN  mkdir -p /tmp-libsodium/libsodium \
   && rm -Rf /tmp-libsodium/ \
   && docker-php-ext-install sodium \
   && docker-php-ext-enable sodium
-RUN  pecl install xdebug 
+RUN  pecl install xdebug-3.1.5 
 RUN  docker-php-ext-enable xdebug
 
 RUN echo "memory_limit = -1;" > $PHP_INI_DIR/conf.d/memory_limit.ini
