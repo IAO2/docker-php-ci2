@@ -13,7 +13,7 @@ RUN apt-get install -y libonig-dev
 #RUN apt-get install -y graphviz 
 RUN apt-get install -y zip 
 RUN apt-get install -y libmcrypt-dev 
-#RUN apt-get install -y libicu-dev 
+RUN apt-get install -y libicu-dev 
 #RUN apt-get install -y g++ 
 #RUN apt-get install -y libpcre3-dev 
 RUN apt-get install -y libgd-dev 
@@ -28,7 +28,13 @@ RUN apt-get install -y autoconf
 RUN apt-get install -y libc-dev 
 RUN apt-get install -y pkg-config
 
+RUN apt-get install -y libssl-dev
+
 RUN  apt-get clean 
+
+RUN docker-php-ext-configure ftp --with-openssl-dir=/usr \
+	&& docker-php-ext-install ftp
+
 RUN  docker-php-ext-install soap 
 RUN  docker-php-ext-install zip 
 RUN  docker-php-ext-install xsl 

@@ -1,4 +1,4 @@
-FROM php:8.1
+FROM php:8.3
 
 RUN apt-get update
 
@@ -28,7 +28,13 @@ RUN apt-get install -y autoconf
 RUN apt-get install -y libc-dev 
 RUN apt-get install -y pkg-config
 
+RUN apt-get install -y libssl-dev
+
 RUN  apt-get clean 
+
+RUN docker-php-ext-configure ftp --with-openssl-dir=/usr \
+	&& docker-php-ext-install ftp
+
 RUN  docker-php-ext-install soap 
 RUN  docker-php-ext-install zip 
 RUN  docker-php-ext-install xsl 
@@ -45,9 +51,6 @@ RUN  docker-php-ext-configure gd --with-freetype --with-jpeg \
   && docker-php-ext-install gd 
 RUN  pecl install --nodeps mcrypt-snapshot 
 RUN  docker-php-ext-enable mcrypt 
-
-RUN  pecl install xdebug 
-RUN  docker-php-ext-enable xdebug
 
 RUN echo "memory_limit = -1;" > $PHP_INI_DIR/conf.d/memory_limit.ini
 

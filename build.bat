@@ -6,6 +6,8 @@ CD %1
 
 docker build --tag iao2/docker-php-ci2:%1 .
 
+docker image push iao2/docker-php-ci2:%1
+
 GOTO END
 
 :HELP
@@ -19,5 +21,5 @@ ECHO.
 CD ..
 
 :BE5
-C:\UTIL\JV_BE.exe 30
+C:\UTIL\JV_BE.exe 25
 

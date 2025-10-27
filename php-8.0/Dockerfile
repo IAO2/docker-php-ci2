@@ -13,7 +13,7 @@ RUN apt-get install -y libonig-dev
 #RUN apt-get install -y graphviz 
 RUN apt-get install -y zip 
 RUN apt-get install -y libmcrypt-dev 
-#RUN apt-get install -y libicu-dev 
+RUN apt-get install -y libicu-dev 
 #RUN apt-get install -y g++ 
 #RUN apt-get install -y libpcre3-dev 
 RUN apt-get install -y libgd-dev 
