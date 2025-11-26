@@ -13,7 +13,7 @@ CALL build.bat php-8.3
 
 :PHP84
 CALL build.bat php-8.4-no-xdebug 
-REM REM CALL build.bat php-8.4 
+CALL build.bat php-8.4 
 
 :END
 ECHO.
